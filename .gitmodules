@@ -1,0 +1,3 @@
+[submodule "Vendor/sqlite-net"]
+	path = Vendor/sqlite-net
+	url = git://github.com/praeclarum/sqlite-net.git
