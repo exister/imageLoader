@@ -4,13 +4,24 @@ using System;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Collections.Generic;
 
-namespace IL.MT
+namespace IL.MT.UI
 {
 	public partial class ImagesListCell : UITableViewCell
 	{
 		public ImagesListCell (IntPtr handle) : base (handle)
 		{
+		}
+
+		public void setImage (UIImage image)
+		{
+			imageView.Image = image;
+		}
+
+		public void setUrl (string url) 
+		{
+			urlLabel.Text = url;
 		}
 	}
 }

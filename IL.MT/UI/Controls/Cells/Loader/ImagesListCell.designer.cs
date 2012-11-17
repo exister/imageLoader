@@ -6,7 +6,7 @@
 //
 using MonoTouch.Foundation;
 
-namespace IL.MT
+namespace IL.MT.UI
 {
 	[Register ("ImagesListCell")]
 	partial class ImagesListCell

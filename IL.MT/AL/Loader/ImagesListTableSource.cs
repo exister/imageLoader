@@ -33,14 +33,10 @@ namespace IL.MT.AL
 
 		public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
 		{
-			UI.ImagesListCell cell = tableView.DequeueReusableCell (this._cellId);
+			UI.ImagesListCell cell = tableView.DequeueReusableCell (this._cellId) as UI.ImagesListCell;
 
-			if (cell == null) {
-				cell = new UI.ImagesListCell(this._cellId);
-			}
-
-			cell.urlLabel.Text = this._images[indexPath.Row].url;
-			cell.imageView.Image = placeholder;
+			cell.setUrl(this._images[indexPath.Row].url);
+			cell.setImage(placeholder);
 
 			return cell;
 		}
@@ -57,7 +53,7 @@ namespace IL.MT.AL
 
 		public override string TitleForFooter (UITableView tableView, int section)
 		{
-			return String.Format("Всего: {0}", this.RowsInSection(section).ToString());
+			return String.Format("Всего: {0}", this.RowsInSection(tableView, section).ToString());
 		}
 	}
 }
