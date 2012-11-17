@@ -110,6 +110,10 @@
     <Compile Include="UI\Controls\Cells\Loader\ImagesListCell.designer.cs">
       <DependentUpon>ImagesListCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Views\Loader\ImagesListView.cs" />
+    <Compile Include="UI\Views\Loader\ImagesListView.designer.cs">
+      <DependentUpon>ImagesListView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
