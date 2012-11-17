@@ -87,10 +87,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="IL.MTViewController.cs" />
-    <Compile Include="IL.MTViewController.designer.cs">
-      <DependentUpon>IL.MTViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="..\IL.Core\BL\Image.cs">
       <Link>IL.Core\BL\Image.cs</Link>
     </Compile>
@@ -100,6 +96,26 @@
     <Compile Include="..\IL.Core\DL\ImageDatabase.cs">
       <Link>IL.Core\DL\ImageDatabase.cs</Link>
     </Compile>
+    <Compile Include="..\Vendor\sqlite-net\src\SQLite.cs">
+      <Link>IL.Core\DL\SQLite.cs</Link>
+    </Compile>
+    <Compile Include="AL\Loader\ImagesListTableSource.cs" />
+    <Compile Include="..\IL.Core\BL\Managers\ImageManager.cs">
+      <Link>IL.Core\BL\Managers\ImageManager.cs</Link>
+    </Compile>
+    <Compile Include="..\IL.Core\DAL\ImageManager.cs">
+      <Link>IL.Core\DAL\ImageManager.cs</Link>
+    </Compile>
+    <Compile Include="ImagesListCell.designer.cs">
+      <DependentUpon>ImagesListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\Cells\Loader\ImagesListCell.cs" />
+    <Compile Include="UI\Controls\Cells\Loader\ImagesListCell.designer.cs">
+      <DependentUpon>ImagesListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagesListView.designer.cs">
+      <DependentUpon>ImagesListView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
@@ -107,5 +123,19 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="IL.Core\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\Views\" />
+    <Folder Include="UI\Views\Loader\" />
+    <Folder Include="AL\" />
+    <Folder Include="AL\Loader\" />
+    <Folder Include="IL.Core\BL\Managers\" />
+    <Folder Include="UI\Controls\" />
+    <Folder Include="UI\Controls\Cells\" />
+    <Folder Include="UI\Controls\Cells\Loader\" />
+    <Folder Include="Images\" />
+    <Folder Include="Images\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Shared\placeholder.jpg" />
   </ItemGroup>
 </Project>

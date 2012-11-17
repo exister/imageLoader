@@ -56,6 +56,9 @@
     <Compile Include="..\IL.Core\DL\ImageDatabase.cs">
       <Link>IL.Core\DL\ImageDatabase.cs</Link>
     </Compile>
+    <Compile Include="..\Vendor\sqlite-net\src\SQLite.cs">
+      <Link>IL.Core\DL\SQLite.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

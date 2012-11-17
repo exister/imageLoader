@@ -1,27 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1906" systemVersion="11A511" targetRuntime="iOS.CocoaTouch" nextObjectID="6" propertyAccessControl="none" initialViewController="2">
-	<dependencies>
-		<development defaultVersion="4200" identifier="xcode" />
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="902" />
-	</dependencies>
-	<scenes>
-		<scene sceneID="5">
-			<objects>
-				<placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder" />
-				<viewController id="2" customClass="IL_MTViewController" sceneMemberID="viewController">
-					<view key="view" contentMode="scaleToFill" id="3">
-						<rect key="frame" x="0.0" y="20" width="320" height="460" />
-						<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
-						<subviews />
-						<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-					</view>
-				</viewController>
-			</objects>
-		</scene>
-	</scenes>
-	<simulatedMetricsContainer key="defaultSimulatedMetrics">
-		<simulatedStatusBarMetrics key="statusBar" />
-		<simulatedOrientationMetrics key="orientation" />
-		<simulatedScreenMetrics key="destination" />
-	</simulatedMetricsContainer>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ezy-6D-tiA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Images List View-->
+        <scene sceneID="yJ2-Yl-qf2">
+            <objects>
+                <tableViewController id="Ezy-6D-tiA" customClass="ImagesListView" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="130" sectionHeaderHeight="22" sectionFooterHeight="22" id="yKp-Hs-WFR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="defaultCell" rowHeight="130" id="aoC-LV-S1U" customClass="ImagesListCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="IE7-IC-TYu">
+                                            <rect key="frame" x="20" y="10" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jzU-hg-yDx">
+                                            <rect key="frame" x="145" y="10" width="155" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="imageView" destination="IE7-IC-TYu" id="jmq-j1-r91"/>
+                                    <outlet property="urlLabel" destination="jzU-hg-yDx" id="xKc-cm-F21"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ezy-6D-tiA" id="uzx-hD-YXS"/>
+                            <outlet property="delegate" destination="Ezy-6D-tiA" id="dwM-Y7-AbU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRu-fq-e0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="76"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ImagesListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagesListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="urlLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

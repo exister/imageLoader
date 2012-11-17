@@ -10,6 +10,11 @@ namespace IL.Core.BL
 		{
 		}
 
+		public Image (string url) : this()
+		{
+			this.url = url;
+		}
+
 		#region IBusinessEntity implementation
 		[PrimaryKey, AutoIncrement]
 		public int id {

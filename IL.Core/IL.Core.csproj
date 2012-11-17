@@ -36,6 +36,8 @@
     <Folder Include="DL\" />
     <Folder Include="BL\" />
     <Folder Include="BL\Contracts\" />
+    <Folder Include="BL\Managers\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Vendor\sqlite-net\src\SQLite.cs">
@@ -44,5 +46,7 @@
     <Compile Include="DL\ImageDatabase.cs" />
     <Compile Include="BL\Image.cs" />
     <Compile Include="BL\Contracts\IBusinessEntity.cs" />
+    <Compile Include="BL\Managers\ImageManager.cs" />
+    <Compile Include="DAL\ImageManager.cs" />
   </ItemGroup>
 </Project>
