@@ -29,6 +29,9 @@ namespace IL.MD
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int placeholder = 2130837505;
+			
 			private Drawable()
 			{
 			}
@@ -38,7 +41,10 @@ namespace IL.MD
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int photo = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int url = 2131034113;
 			
 			private Id()
 			{
@@ -49,7 +55,7 @@ namespace IL.MD
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int ImagesListCell = 2130903040;
 			
 			private Layout()
 			{
